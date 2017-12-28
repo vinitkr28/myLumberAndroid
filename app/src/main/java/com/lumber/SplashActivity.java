@@ -103,4 +103,8 @@ public class SplashActivity extends AppCompatActivity
     public void method1(){
         Log.i(SplashActivity.class.getSimpleName(), "First Merge");
     }
+
+    public void method2(){
+        Log.i(SplashActivity.class.getSimpleName(), "Second Merge");
+    }
 }
