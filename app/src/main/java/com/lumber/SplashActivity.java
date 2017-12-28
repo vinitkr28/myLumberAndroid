@@ -3,6 +3,7 @@ package com.lumber;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -97,5 +98,13 @@ public class SplashActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void method3(){
+        Log.i(SplashActivity.class.getSimpleName(), "Third Changes");
+    }
+
+    public void method4(){
+        Log.i(SplashActivity.class.getSimpleName(), "Fourth Changes");
     }
 }
