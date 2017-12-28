@@ -115,7 +115,7 @@ public class SplashActivity extends AppCompatActivity
         Log.i(SplashActivity.class.getSimpleName(), "Third Changes");
     }
 
-    public void method3(){
+    public void method3a(){
         Log.i(SplashActivity.class.getSimpleName(), "Third Changes");
     }
 
