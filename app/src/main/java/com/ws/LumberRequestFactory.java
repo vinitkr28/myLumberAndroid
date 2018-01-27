@@ -1,7 +1,7 @@
 package com.ws;
 
 import com.lumber.LumberBaseActivity;
-import com.lumber.util.LumberLog;
+import com.util.LumberLog;
 
 /**
  * Created by H193409 on 1/26/2018.
