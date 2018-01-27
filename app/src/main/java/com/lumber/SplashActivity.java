@@ -1,5 +1,6 @@
 package com.lumber;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -17,15 +18,20 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class SplashActivity extends AppCompatActivity
+import com.lumber.util.LumberLog;
+
+public class SplashActivity extends LumberBaseActivity/*AppCompatActivity*/
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
+        prepareAppLogin();
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        //setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -44,6 +50,13 @@ public class SplashActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+    }
+
+    private void prepareAppLogin() {
+        //For Production
+        if (LumberLog.getLoggerLevel() == LumberLog.OFF){
+            LumberLog.setLoggerLevel(LumberLog.D);
+        }
     }
 
     @Override
